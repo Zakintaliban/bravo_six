@@ -1,3 +1,3 @@
-import { Bravo_Six } from "./index.ts";
+import { Bravo_Six } from "index";
 
 export default Bravo_Six;
