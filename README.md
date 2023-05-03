@@ -25,11 +25,10 @@ const myTheme = new BravoSix(document.body);
 myTheme.applyColors("dark");
 ```
 
-Tema warna yang didukung:
+### Tema Warna
 
-- "original"
-- "dark"
-- "light"
-- "night-vision"
+- `"dark"`: latar belakang hitam dan teks putih
+- `"light"`: latar belakang putih dan teks hitam
+- `"night-vision"`: latar belakang _teal_ (#367978, terinspirasi dari Call of Duty©) dan teks putih
 
 Lisensi: MIT
