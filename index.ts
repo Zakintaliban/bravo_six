@@ -43,4 +43,4 @@ class Bravo_Six {
   }
 }
 
-export default Bravo_Six;
+export { Bravo_Six };
