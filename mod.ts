@@ -1,3 +1,3 @@
-import { Bravo_Six } from "./bravo_six";
+import { Bravo_Six } from "./bravo_six.ts";
 
 export default Bravo_Six;
