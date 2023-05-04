@@ -31,4 +31,52 @@ myTheme.applyColors("dark");
 - `"light"`: latar belakang putih dan teks hitam
 - `"night-vision"`: latar belakang _teal_ (#367978, terinspirasi dari Call of Duty©) dan teks putih
 
-Lisensi: MIT
+## Contoh Penggunaan di Aplikasi React lewat Aleph.JS
+
+```tsx
+import React, { useState, useEffect } from "https://esm.sh/react";
+import Header from "../components/Header.tsx";
+import Bravo_Six from "https://deno.land/x/bravo_six/mod.ts";
+
+export default function App({ children }: { children: React.ReactNode }) {
+  const [colorTheme, setColorTheme] = useState("original");
+  const [bravoSix, setBravoSix] = useState<Bravo_Six | null>(null);
+
+  useEffect(() => {
+    setBravoSix(new Bravo_Six(document.body));
+  }, []);
+
+  const handleButtonClick = () => {
+    if (!bravoSix) return;
+
+    console.log("Current color theme:", colorTheme);
+    let newTheme;
+    switch (colorTheme) {
+      case "original":
+        newTheme = "dark";
+        break;
+      case "dark":
+        newTheme = "light";
+        break;
+      case "light":
+        newTheme = "night-vision";
+        break;
+      case "night-vision":
+        newTheme = "original";
+        break;
+      default:
+        newTheme = "original";
+    }
+    setColorTheme(newTheme);
+    bravoSix.applyColors(newTheme);
+  };
+
+  return (
+    <>
+      <Header />
+      {children}
+      <button onClick={handleButtonClick}>Ganti Tema Warna</button>
+    </>
+  );
+}
+```
