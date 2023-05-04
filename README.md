@@ -7,7 +7,7 @@ Bravo Six adalah modul Deno yang memungkinkan Anda mengganti tema warna elemen H
 Untuk mengimpor modul Bravo Six, tambahkan baris berikut ke file Deno Anda:
 
 ```ts
-import BravoSix from "https://deno.land/x/bravo_six/mod.ts";
+import Bravo_Six from "https://deno.land/x/bravo_six/mod.ts";
 ```
 
 Gantilah mod.ts dengan nama file yang sesuai (misalnya bravo_six.ts atau bravo_six.js) jika Anda tidak memiliki file mod.ts dalam repositori Anda.
